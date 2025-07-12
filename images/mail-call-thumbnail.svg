@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1E1E1E"/>
+  
+  <!-- Table surface -->
+  <rect x="0" y="200" width="400" height="100" fill="#8B4513"/>
+  
+  <!-- Cardboard box -->
+  <rect x="150" y="120" width="100" height="80" fill="#D2B48C" stroke="#8B7355" stroke-width="2"/>
+  <rect x="150" y="120" width="100" height="15" fill="#F5DEB3"/>
+  
+  <!-- Box tape -->
+  <rect x="190" y="120" width="20" height="80" fill="#CD853F" opacity="0.8"/>
+  <rect x="150" y="155" width="100" height="10" fill="#CD853F" opacity="0.8"/>
+  
+  <!-- Shipping label -->
+  <rect x="160" y="140" width="80" height="25" fill="white" stroke="#000" stroke-width="1"/>
+  <text x="200" y="155" text-anchor="middle" fill="black" font-family="Arial, sans-serif" font-size="10" font-weight="bold">HOW TO BBQ RIGHT</text>
+  
+  <!-- Rub containers spilling out -->
+  <!-- Container 1 -->
+  <rect x="80" y="170" width="30" height="40" fill="#FF6B35" rx="3"/>
+  <rect x="80" y="170" width="30" height="8" fill="#FF8C00"/>
+  <text x="95" y="195" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">RUB</text>
+  
+  <!-- Container 2 -->
+  <rect x="290" y="165" width="30" height="40" fill="#DC143C" rx="3"/>
+  <rect x="290" y="165" width="30" height="8" fill="#FF1493"/>
+  <text x="305" y="190" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">SPICE</text>
+  
+  <!-- Container 3 -->
+  <rect x="120" y="180" width="25" height="35" fill="#228B22" rx="3"/>
+  <rect x="120" y="180" width="25" height="7" fill="#32CD32"/>
+  <text x="132" y="202" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="7" font-weight="bold">HERB</text>
+  
+  <!-- Container 4 -->
+  <rect x="260" y="175" width="25" height="35" fill="#4169E1" rx="3"/>
+  <rect x="260" y="175" width="25" height="7" fill="#6495ED"/>
+  <text x="272" y="197" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="7" font-weight="bold">SALT</text>
+  
+  <!-- Scattered spices/rub particles -->
+  <g fill="#8B4513" opacity="0.6">
+    <circle cx="70" cy="195" r="2"/>
+    <circle cx="85" cy="205" r="1.5"/>
+    <circle cx="95" cy="200" r="1"/>
+    <circle cx="310" cy="190" r="2"/>
+    <circle cx="325" cy="200" r="1.5"/>
+    <circle cx="340" cy="195" r="1"/>
+  </g>
+  
+  <!-- Mail/delivery elements -->
+  <rect x="50" y="100" width="60" height="40" fill="white" stroke="#000" stroke-width="1" transform="rotate(-15 80 120)"/>
+  <text x="80" y="125" text-anchor="middle" fill="black" font-family="Arial, sans-serif" font-size="8" transform="rotate(-15 80 125)">MAIL</text>
+  
+  <!-- Title overlay -->
+  <rect x="0" y="240" width="400" height="60" fill="rgba(0,0,0,0.7)"/>
+  <text x="200" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Mail Call Unboxing</text>
+  <text x="200" y="285" text-anchor="middle" fill="#FF8C00" font-family="Arial, sans-serif" font-size="14">How To BBQ Right Products</text>
+</svg>

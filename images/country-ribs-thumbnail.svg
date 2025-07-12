@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#2D1810"/>
+  
+  <!-- Grill grates -->
+  <g stroke="#8B4513" stroke-width="3" opacity="0.6">
+    <line x1="50" y1="180" x2="350" y2="180"/>
+    <line x1="50" y1="200" x2="350" y2="200"/>
+    <line x1="50" y1="220" x2="350" y2="220"/>
+  </g>
+  
+  <!-- Ribs -->
+  <ellipse cx="120" cy="190" rx="40" ry="15" fill="#8B4513" transform="rotate(-10 120 190)"/>
+  <ellipse cx="200" cy="200" rx="45" ry="18" fill="#A0522D" transform="rotate(5 200 200)"/>
+  <ellipse cx="280" cy="185" rx="42" ry="16" fill="#8B4513" transform="rotate(-8 280 185)"/>
+  
+  <!-- Char marks -->
+  <g stroke="#654321" stroke-width="2" opacity="0.8">
+    <line x1="100" y1="185" x2="140" y2="195"/>
+    <line x1="180" y1="195" x2="220" y2="205"/>
+    <line x1="260" y1="180" x2="300" y2="190"/>
+  </g>
+  
+  <!-- Smoke effect -->
+  <g fill="#E6E6FA" opacity="0.4">
+    <circle cx="150" cy="120" r="8"/>
+    <circle cx="170" cy="100" r="12"/>
+    <circle cx="190" cy="80" r="10"/>
+    <circle cx="220" cy="110" r="9"/>
+    <circle cx="240" cy="90" r="11"/>
+  </g>
+  
+  <!-- Title overlay -->
+  <rect x="0" y="240" width="400" height="60" fill="rgba(0,0,0,0.7)"/>
+  <text x="200" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Country Style Ribs</text>
+  <text x="200" y="285" text-anchor="middle" fill="#FF8C00" font-family="Arial, sans-serif" font-size="14">on Traeger Grill</text>
+</svg>

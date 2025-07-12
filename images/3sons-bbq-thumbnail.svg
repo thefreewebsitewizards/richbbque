@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1A1A2E"/>
+  
+  <!-- Restaurant building silhouette -->
+  <rect x="80" y="120" width="240" height="120" fill="#2C2C54"/>
+  <polygon points="80,120 200,80 320,120" fill="#16213E"/>
+  
+  <!-- Windows -->
+  <rect x="100" y="140" width="30" height="40" fill="#FFD700" opacity="0.8"/>
+  <rect x="150" y="140" width="30" height="40" fill="#FFD700" opacity="0.8"/>
+  <rect x="220" y="140" width="30" height="40" fill="#FFD700" opacity="0.8"/>
+  <rect x="270" y="140" width="30" height="40" fill="#FFD700" opacity="0.8"/>
+  
+  <!-- Door -->
+  <rect x="185" y="190" width="30" height="50" fill="#8B4513"/>
+  <circle cx="205" cy="215" r="2" fill="#FFD700"/>
+  
+  <!-- Sign -->
+  <rect x="120" y="100" width="160" height="30" fill="#DC143C" rx="5"/>
+  <text x="200" y="120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">3 SONS BBQ</text>
+  
+  <!-- Smoke from chimney -->
+  <g fill="#E6E6FA" opacity="0.5">
+    <circle cx="290" cy="70" r="6"/>
+    <circle cx="295" cy="55" r="8"/>
+    <circle cx="300" cy="40" r="7"/>
+    <circle cx="305" cy="25" r="9"/>
+  </g>
+  
+  <!-- Stars -->
+  <g fill="#FFD700">
+    <polygon points="50,50 52,56 58,56 53,60 55,66 50,62 45,66 47,60 42,56 48,56" opacity="0.8"/>
+    <polygon points="350,40 352,46 358,46 353,50 355,56 350,52 345,56 347,50 342,46 348,46" opacity="0.8"/>
+    <polygon points="370,80 372,86 378,86 373,90 375,96 370,92 365,96 367,90 362,86 368,86" opacity="0.6"/>
+  </g>
+  
+  <!-- Title overlay -->
+  <rect x="0" y="240" width="400" height="60" fill="rgba(0,0,0,0.7)"/>
+  <text x="200" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">3 Sons BBQ Review</text>
+  <text x="200" y="285" text-anchor="middle" fill="#FF8C00" font-family="Arial, sans-serif" font-size="14">Santa Rosa Beach, FL</text>
+</svg>
