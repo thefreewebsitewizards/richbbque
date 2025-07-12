@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master the Art of BBQ | Premium Grilling Equipment & Tips</title>
+    <meta name="description" content="Discover championship-level BBQ tools and techniques from a professional pitmaster. Shop curated premium products and elevate your grilling game.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap');
+        
+        :root {
+            --primary-red: #8B0000;
+            --secondary-red: #DC143C;
+            --charcoal-dark: #2F4F4F;
+            --charcoal-light: #36454F;
+            --wood-dark: #8B4513;
+            --wood-light: #A0522D;
+            --accent-orange: #FF8C00;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+        
+        .title-font {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .wood-bg {
+            background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+            background-color: var(--wood-dark);
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-red);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-red);
+            transform: translateY(-2px);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .video-thumbnail:hover {
+            transform: scale(1.03);
+        }
+        
+        .video-thumbnail::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .video-thumbnail:hover::after {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: white;
+            font-size: 3rem;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .video-thumbnail:hover .play-icon {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+        
+        .brand-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .brand-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        .about-img {
+            box-shadow: 10px 10px 0 var(--accent-orange);
+            transition: all 0.3s ease;
+        }
+        
+        .about-img:hover {
+            box-shadow: 15px 15px 0 var(--accent-orange);
+        }
+        
+        input, textarea {
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, textarea:focus {
+            border-color: var(--secondary-red);
+            box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.2);
+        }
+        
+        .footer {
+            background: linear-gradient(to right, var(--charcoal-dark), var(--charcoal-light));
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-red);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 60vh;
+            }
+            
+            .title-font {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="title-font text-3xl text-red-800">BBQ MASTER</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="nav-link text-gray-800 font-semibold">Home</a>
+                <a href="#social" class="nav-link text-gray-800 font-semibold">Socials</a>
+                <a href="#brands" class="nav-link text-gray-800 font-semibold">Brands</a>
+                <a href="#about" class="nav-link text-gray-800 font-semibold">About</a>
+                <a href="#contact" class="nav-link text-gray-800 font-semibold">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-4 py-20">
+            <h1 class="title-font text-5xl md:text-6xl lg:text-7xl mb-4">MASTER THE ART OF BBQ</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Discover the exact tools and equipment I use to create championship-level BBQ. Shop my curated selection of premium products.</p>
+            <a href="#products" class="btn-primary inline-block px-8 py-3 rounded-full text-white font-bold text-lg shadow-lg">SHOP MY FAVORITES</a>
+            <div class="mt-12 flex justify-center space-x-4">
+                <div class="bg-white bg-opacity-20 rounded-full px-6 py-2">
+                    <span class="font-bold">250K+</span> Followers
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-full px-6 py-2">
+                    <span class="font-bold">15+</span> Years Experience
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="title-font text-4xl text-center mb-12 text-gray-800">MY ESSENTIAL BBQ ARSENAL</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Premium Pellet Grill" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">BEST SELLER</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Premium Pellet Grill</h3>
+                        <p class="text-gray-600 mb-4">The game-changing pellet grill that revolutionized my cooking. Perfect temperature control and incredible flavor infusion.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$899 - $1,299</span>
+                            <a href="#" class="btn-primary px-6 py-2 rounded-full text-white font-semibold text-sm">GET YOURS NOW</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1599305447821-a14f3686a122?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Professional Grade Thermometer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Professional Grade Thermometer</h3>
+                        <p class="text-gray-600 mb-4">Never overcook again with this wireless dual-probe thermometer. Monitor your meat and grill temp from anywhere.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$79 - $129</span>
+                            <a href="#" class="btn-primary px-6 py-2 rounded-full text-white font-semibold text-sm">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Premium Rub Collection" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-bold">NEW</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Premium Rub Collection</h3>
+                        <p class="text-gray-600 mb-4">My signature spice blends that create that perfect bark and incredible flavor profile every time.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$24.99 - $49.99</span>
+                            <a href="#" class="btn-primary px-6 py-2 rounded-full text-white font-semibold text-sm">ORDER TODAY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-red-600 text-red-600 font-bold px-8 py-3 rounded-full hover:bg-red-600 hover:text-white transition-all">VIEW ALL PRODUCTS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Content Section -->
+    <section class="py-16 wood-bg text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="title-font text-4xl text-center mb-12">WATCH ME COOK</h2>
+            <p class="text-center text-xl mb-12 max-w-3xl mx-auto">Get exclusive behind-the-scenes content and step-by-step tutorials from my latest BBQ sessions.</p>
+            
+            <!-- Featured Video -->
+            <div class="mb-16">
+                <div class="relative overflow-hidden rounded-lg shadow-xl" style="padding-bottom: 56.25%;">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-2xl font-bold mt-4">Perfect Brisket in 12 Hours - Full Process</h3>
+                <p class="text-gray-300">Learn my championship-winning brisket technique from start to finish.</p>
+            </div>
+            
+            <!-- Video Thumbnails -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Video 1 -->
+                <div class="video-thumbnail rounded-lg overflow-hidden relative cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                         alt="Competition-Style Ribs" class="w-full h-48 object-cover">
+                    <div class="play-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                        <h4 class="font-bold text-white">Competition-Style Ribs That Win Every Time</h4>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-thumbnail rounded-lg overflow-hidden relative cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1518492104633-130d0cc84637?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1512&q=80" 
+                         alt="Smoked Salmon" class="w-full h-48 object-cover">
+                    <div class="play-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                        <h4 class="font-bold text-white">Smoked Salmon Like You've Never Tasted</h4>
+                    </div>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="video-thumbnail rounded-lg overflow-hidden relative cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1468&q=80" 
+                         alt="BBQ Chicken" class="w-full h-48 object-cover">
+                    <div class="play-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                        <h4 class="font-bold text-white">Juicy BBQ Chicken - The Ultimate Guide</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-red-800 transition-all">MORE VIDEOS ON YOUTUBE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="title-font text-4xl text-center mb-12 text-gray-800">FOLLOW MY BBQ JOURNEY</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Instagram -->
+                <div class="text-center p-6 rounded-lg bg-gray-50 hover:shadow-md transition-all">
+                    <div class="social-icon inline-block bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-full p-4 mb-4">
+                        <i class="fab fa-instagram text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Instagram</h3>
+                    <p class="text-gray-600 mb-4">Daily BBQ inspiration and tips</p>
+                    <div class="text-red-600 font-bold mb-4">@BBQMasterPro</div>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full hover:bg-gray-300 transition-all">Follow</a>
+                </div>
+                
+                <!-- YouTube -->
+                <div class="text-center p-6 rounded-lg bg-gray-50 hover:shadow-md transition-all">
+                    <div class="social-icon inline-block bg-red-600 text-white rounded-full p-4 mb-4">
+                        <i class="fab fa-youtube text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">YouTube</h3>
+                    <p class="text-gray-600 mb-4">Full cooking tutorials and reviews</p>
+                    <div class="text-red-600 font-bold mb-4">BBQ Master Channel</div>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full hover:bg-gray-300 transition-all">Subscribe</a>
+                </div>
+                
+                <!-- TikTok -->
+                <div class="text-center p-6 rounded-lg bg-gray-50 hover:shadow-md transition-all">
+                    <div class="social-icon inline-block bg-black text-white rounded-full p-4 mb-4">
+                        <i class="fab fa-tiktok text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">TikTok</h3>
+                    <p class="text-gray-600 mb-4">Quick tips and mouth-watering content</p>
+                    <div class="text-red-600 font-bold mb-4">@BBQMaster</div>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full hover:bg-gray-300 transition-all">Follow</a>
+                </div>
+                
+                <!-- Facebook -->
+                <div class="text-center p-6 rounded-lg bg-gray-50 hover:shadow-md transition-all">
+                    <div class="social-icon inline-block bg-blue-600 text-white rounded-full p-4 mb-4">
+                        <i class="fab fa-facebook-f text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Facebook</h3>
+                    <p class="text-gray-600 mb-4">Community discussions and live sessions</p>
+                    <div class="text-red-600 font-bold mb-4">BBQ Master Community</div>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full hover:bg-gray-300 transition-all">Join</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Brands Section -->
+    <section id="brands" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="title-font text-4xl text-center mb-12 text-gray-800">TRUSTED PARTNERS</h2>
+            <p class="text-center text-lg mb-12 max-w-3xl mx-auto">I only recommend products I personally use and trust. These brands have proven themselves in my kitchen and competitions.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
+                <div class="brand-logo flex items-center justify-center p-4">
+                    <img src="https://via.placeholder.com/150x80?text=H2Q+Shop" alt="H2Q Shop" class="max-h-16">
+                </div>
+                <div class="brand-logo flex items-center justify-center p-4">
+                    <img src="https://via.placeholder.com/150x80?text=GrillPro" alt="GrillPro" class="max-h-16">
+                </div>
+                <div class="brand-logo flex items-center justify-center p-4">
+                    <img src="https://via.placeholder.com/150x80?text=SmokeKing" alt="SmokeKing" class="max-h-16">
+                </div>
+                <div class="brand-logo flex items-center justify-center p-4">
+                    <img src="https://via.placeholder.com/150x80?text=FlavorCraft" alt="FlavorCraft" class="max-h-16">
+                </div>
+                <div class="brand-logo flex items-center justify-center p-4">
+                    <img src="https://via.placeholder.com/150x80?text=IronPit" alt="IronPit" class="max-h-16">
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-gray-600 mb-6">Want to become a partner? Get in touch!</p>
+                <a href="#contact" class="btn-primary inline-block px-8 py-3 rounded-full text-white font-bold">PARTNER WITH ME</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+                    <h2 class="title-font text-4xl mb-6 text-gray-800">ABOUT BBQ MASTER</h2>
+                    <p class="text-lg mb-4">I've been perfecting the art of BBQ for over 15 years, competing in competitions across the country and sharing my passion with thousands of followers. My mission is simple: help fellow pitmasters achieve BBQ greatness with the right tools, techniques, and dedication.</p>
+                    <p class="text-lg mb-4">From my first backyard smoker to competing at the highest levels, I've tested countless products and techniques. Now, I share only the gear and methods that have proven themselves in real competition settings.</p>
+                    <p class="text-lg mb-6">When I'm not smoking meat, you'll find me creating content, testing new equipment, and building the BBQ community one perfectly cooked brisket at a time.</p>
+                    
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="bg-gray-100 px-4 py-2 rounded-full">
+                            <span class="font-bold">15+</span> Years Experience
+                        </div>
+                        <div class="bg-gray-100 px-4 py-2 rounded-full">
+                            <span class="font-bold">50+</span> Competitions
+                        </div>
+                        <div class="bg-gray-100 px-4 py-2 rounded-full">
+                            <span class="font-bold">12</span> Awards Won
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn-primary inline-block px-8 py-3 rounded-full text-white font-bold">GET IN TOUCH</a>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="about-img overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1600891965050-8
+</html>
